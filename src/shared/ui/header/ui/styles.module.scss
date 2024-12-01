@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  margin: 20px auto;
+
+  &__title {
+    flex: 1;
+  }
+}

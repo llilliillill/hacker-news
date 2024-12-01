@@ -1,0 +1,1 @@
+export { useCommentStore as commentModel } from "./comment";

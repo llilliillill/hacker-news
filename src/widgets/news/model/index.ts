@@ -1,0 +1,1 @@
+export { useNewsStore as newsModel } from "./news";
