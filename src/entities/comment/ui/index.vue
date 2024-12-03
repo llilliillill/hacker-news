@@ -31,7 +31,7 @@
   import { ref } from "vue"
   import { Comment } from "entities/comment";
 
-  const open = ref(false)
+  const open = ref<boolean>(false)
 
   const props = defineProps<{
     comment: CommentType,

@@ -6,7 +6,7 @@ const store = newsListModel()
 export const getNewsListIds = async () => {
   try {
     const req = await fetch(
-      `${ API_URL }/v0/beststories.json?print=pretty`, 
+      `${ API_URL }/beststories.json?print=pretty`, 
     )
     return (await req.json()).slice(0, 100)
   } catch (err) {
@@ -19,7 +19,7 @@ export const getNews = async () => {
   try {
     store.loading = true
     const req = ids.map((id: number) => 
-      fetch(`${ API_URL }/v0/item/${id}.json?print=pretty`)
+      fetch(`${ API_URL }/item/${id}.json?print=pretty`)
     )
     const rows = await Promise.all(
       (await Promise.all(req)).map(res => res.json())

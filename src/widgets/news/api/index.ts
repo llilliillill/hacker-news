@@ -6,7 +6,7 @@ const store = newsModel()
 export const getComments = async (ids: number[]) => {
   try {
     const req = ids.map((id: number) => 
-      fetch(`${ API_URL }/v0/item/${ id }.json?print=pretty`)
+      fetch(`${ API_URL }/item/${ id }.json?print=pretty`)
     )
     const rows = await Promise.all(
       (await Promise.all(req)).map(res => res.json())
@@ -30,7 +30,7 @@ export const getNewsById = async (id: number) => {
   try {
     store.loading = true
     const res = await fetch(
-      `${ API_URL }/v0/item/${ id }.json`
+      `${ API_URL }/item/${ id }.json`
     )
     const news = await res.json()
     const comments = await getComments(news.kids)

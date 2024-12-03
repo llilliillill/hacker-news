@@ -9,3 +9,11 @@
 body {
   padding: 10px;
 }
+
+a {
+  word-break: break-all;
+}
+
+pre {
+  white-space: wrap;
+}

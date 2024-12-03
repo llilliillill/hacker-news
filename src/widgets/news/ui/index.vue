@@ -64,7 +64,7 @@
     id: number
   }>()
 
-  const news = ref(null)
+  const news = ref<NewsType>(null)
 
   onMounted(async () => {
     news.value = await getNewsById(props.id)
